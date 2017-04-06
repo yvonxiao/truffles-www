@@ -1,0 +1,7 @@
+.idea
+*.iml
+*.iws
+.DS_Store
+falkor_node.iml
+node_modules
+data
