@@ -6,6 +6,10 @@
 	background:#0d0707;
 	padding:33px 0px 20px 0px;
 }
+.header .header-content{
+	width:760px;
+	margin:0 auto;
+}
 .header .headerText ul li {
 	float:left;
 	padding-right:35px;
@@ -15,9 +19,6 @@
 }
 .header .logo img {
 	width:100%;
-}
-.header .headerText{
-	margin-left:200px;
 }
 .header .headerText ul li a {
 	color:#f3d177;
