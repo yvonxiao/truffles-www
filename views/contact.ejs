@@ -7,7 +7,14 @@
 <body class="bgcolor">
 <!--header starts-->
 <%- include('common-header',{active:'contactLink'}) %>
-<!--header ends--> 
+<!--header ends-->
+<!-- nav starts -->
+<div class="nav">
+    <div class="nav-content">
+        <span><a class="nav-home" title="<%= __('indexLink') %>" href="/"><%= __('indexLink') %></a></span>&nbsp;&gt;&nbsp;<span><%= __('contactLink') %></span>
+    </div>
+</div>
+<!-- nav ends -->
 <!--container starts-->
 <div class="container">
   <div class="containertwoone">

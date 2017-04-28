@@ -4,15 +4,11 @@
 .header {
 	width:100%;
 	background:#0d0707;
-	padding:33px 0px 20px 0px;
-}
-.header .header-content{
-	width:760px;
-	margin:0 auto;
+	padding:19px 0px 20px 0px;
 }
 .header .headerText ul li {
 	float:left;
-	padding-right:35px;
+	padding-right:120px;
 }
 .header .logo {
 	width: 218px;
@@ -22,7 +18,7 @@
 }
 .header .headerText ul li a {
 	color:#f3d177;
-	font-size:20px;
+	font-size:22px;
 	letter-spacing:4px;
 	transition:all 1s;
 	-webkit-transition:all 1s;

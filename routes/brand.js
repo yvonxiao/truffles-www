@@ -5,6 +5,8 @@
 var router = require('koa-router')();
 
 router.get('/', async function (ctx, next) {
+    let locale = ctx.cookies.get('locale');
+    ctx.state.isZhCn=locale && locale==='zh-CN';
     await ctx.render('brand');
 })
 module.exports = router;
