@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<%- include('common-head-content',{title:__('productTitle')}) %>
+</head>
+
+<body class="bgcolor">
+<!--header starts-->
+<%- include('common-header',{active:'productLink'}) %>
+<!--header ends-->
+<!--container starts-->
+<div class="container">
+  <div class="containerthree">
+    <div class="wrapper">
+      <div class="tabsect">
+        <div  class=" clearfloat">
+          <div class="sectone fl">
+            <ul id="product-series">
+              <li class="active"><a href="javascript:;" class="clearfloat"><span class="spone fl">1.</span><span class="sptwo fl"><%= __('productBestSellerSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">2.</span><span class="sptwo fl"><%= __('productRowBlockSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">3.</span><span class="sptwo fl"><%= __('productShellSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">4.</span><span class="sptwo fl"><%= __('productAlcoholicSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">5.</span><span class="sptwo fl"><%= __('productWeddingSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">6.</span><span class="sptwo fl"><%= __('productGiftBoxSeries') %></span></a></li>
+            </ul>
+          </div>
+          <div class="secttwo fl">
+            <div id="product-list" class="sectthree">
+              <div class="imagesect"><a href="#"> <img src="images/cnthreeimgone.png"></a> </div>
+              <div class="imagesectthree"><a href="#"> <img src="images/cnthreeimgtwo.png"></a> </div>
+              <div class="secttext">
+                <h2>浓情古典</h2>
+                <h3>CLASSIC</h3>
+                <h4>醇和甘苦,韵味绵长</h4>
+                <p>经典口味之一，浓郁的香味悠远绵长。温和的苦味，较之黑色传统系列略清减了一些，甘味依然饱满而纯正，美妙滋味让人深深迷恋。气质古典的外包装，选用巧克力原材料的色系，格外充满诱人的神韵。 </p>
+              </div>
+              <div class="imagesecttwo"><a href="#"> <img src="images/cnthreeimgfour.png"></a> </div>
+              <div class="secttext secttextextra">
+                <h2>法式原味</h2>
+                <h3>CLASSIC</h3>
+                <h4>纯正法式，经典原味</h4>
+                <p>还原纯正的古典法式松露形巧克力原味，让人恍若穿越到中世纪的法国宫廷，尽享精致美味与浪漫情怀。包装上细致淡雅的法国人文景观纹样，值得细细一赏。徜徉其中，感受悠远时光，畅享慢生活的快乐。</p>
+              </div>
+              <div class="imagesecttwo"><a href="#"> <img src="images/cnthreeimgthree.png"></a> </div>
+              <div class="secttext">
+                <h2>黑色传统</h2>
+                <h3>TRADITIONAL</h3>
+                <h4>先苦后甜，回味经典</h4>
+                <p>表面有一层香醇的可可粉，初入口呈现些许苦味，随后而来的香甜，更加让人在巧克力融在口中的一瞬间，体会到一种幸福的清甜。苦尽甘来的巧克力本色，在本系列中尤为显著，成就了其经典热卖的地位。</p>
+              </div>
+            </div>
+            <div class="sectlast"> <a href="#">产-品/PAGE DOWN</a> </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--container ends-->
+<!--footer starts-->
+<%- include('common-footer') %>
+<!--footer ends-->
+<!--scripts starts-->
+<%- include('common-js') %>
+<!--scripts ends-->
+</body>
+</html>

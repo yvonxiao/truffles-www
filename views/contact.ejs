@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<%- include('common-head-content',{title:__('contactTitle')}) %>
+</head>
+
+<body class="bgcolor">
+<!--header starts-->
+<%- include('common-header',{active:'contactLink'}) %>
+<!--header ends--> 
+<!--container starts-->
+<div class="container">
+  <div class="containertwoone">
+    <div class="wrapper">
+    	<div class="mainbox">
+        	<div class="banner">
+            	<img src="images/twobanner.jpg" alt="banner">
+            </div>
+            <div class="centerblock">
+            <ul>
+            <li><a class="link" href="tel:+86 021-60950054">Tel:+86 021-60950054</a></li>
+            <li>官方微博：<a class="link" href="http://weibo.com/truffeschocolate">http://weibo.com/truffeschocolate </a></li>
+            <li><%= __('address') %></li>
+            </ul>
+            <div class="barcode">
+            	<img src="images/barcode.jpg" alt="barcode">
+                <span class="bartxt">德菲丝公众微信号</span>
+            </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+<!--container ends-->
+<!--footer starts-->
+<%- include('common-footer') %>
+<!--footer ends-->
+<!--scripts starts-->
+<%- include('common-js') %>
+<!--scripts ends-->
+</body>
+</html>

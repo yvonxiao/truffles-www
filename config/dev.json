@@ -1,0 +1,14 @@
+{
+  "appenders":[{
+    "type":"logLevelFilter",
+    "level":"DEBUG",
+    "category":"system",
+    "appender":{
+      "type":"console"
+    }
+  }],
+  "globalConfig":{
+    "website_www":"/",
+    "website_static":"/"
+  }
+}

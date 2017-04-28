@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<%- include('common-head-content',{title:__('indexTitle')}) %>
+<link href="<%= globalConfig.website_static %>css/index.css?v=<%= globalConfig.version %>" rel="stylesheet" type="text/css" media="all"/>
+</head>
+
+<body class="bgcolor">
+<!--header starts-->
+<%- include('common-header',{active:'indexLink'}) %>
+<!--header ends-->
+<!--container starts-->
+<div class="container">
+	<div class="containerOne">
+    	<div class="banner">
+        	<img src="images/ctnonebanner.jpg">
+        </div>
+	<div id="products-wrapper" class="wrapper">
+    	<div class="gal clearfloat">
+			<dl>
+            	<dt><a href="#"><img src="images/ctnonepicone.png"></a></dt>
+                <dd>
+                	<a href="#" class="textStl">经典松露</a>
+                	<h2>Truffles Chocolate</h2>
+                </dd>
+            </dl>
+            <dl>
+            	<dt><a href="#"><img src="images/ctnonepictwo.png"></a></dt>
+                <dd>
+                	<a href="#" class="textStl">精选牌块</a>
+                	<h2>Chocolate Bars</h2>
+                </dd>
+            </dl>
+            <dl>
+            	<dt><a href="#"><img src="images/ctnonepicthree.png"></a></dt>
+                <dd>
+                	<a href="#" class="textStl">浓醇酒心</a>
+                	<h2>Liqueur Chocolate</h2>
+                </dd>
+            </dl>
+            <dl>
+            	<dt><a href="#"><img src="images/ctnonepicfour.png"></a></dt>
+                <dd>
+                	<a href="#" class="textStl">别致贝壳</a>
+                	<h2>Sea Shells</h2>
+                </dd>
+            </dl>
+            <dl>
+            	<dt><a href="#"><img src="images/ctnonepicfive.png"></a></dt>
+                <dd>
+                	<a href="#" class="textStl">精美礼盒</a>
+                	<h2>Gift Boxes</h2>
+                </dd>
+            </dl>
+            <dl class="mrg">
+            	<dt><a href="#"><img src="images/ctnonepicseven.png"></a></dt>
+                <dd>
+                	<a href="#" class="textStl">婚庆喜糖</a>
+                	<h2>For Wedding</h2>
+                </dd>
+            </dl>
+           
+        </div>
+    </div>
+   </div>
+</div>
+<!--container ends-->
+<!--footer starts-->
+<%- include('common-footer') %>
+<!--footer ends-->
+<!--scripts starts-->
+<%- include('common-js') %>
+<!--scripts ends-->
+</body>
+</html>
