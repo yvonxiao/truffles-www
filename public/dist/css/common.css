@@ -1,0 +1,220 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*containerOne start*/
+.containerOne .gal{
+	padding:60px 0px 69px 0px;
+}
+.containerOne .gal dl{
+	width:149px;
+	margin-right:61px;
+	float:left;
+}
+.containerOne .gal dl a{
+	width:100%;
+}
+.containerOne .gal dl .textStl{
+	color: #fce1b4;
+	font-size:16px;
+	text-align:center;
+	display:block;
+	margin-top:-26px;
+	letter-spacing:1px;
+}
+.containerOne .gal dl h2{
+	color: #fff;
+	font-size:12px;
+	text-align:center;
+	padding-top:8px;
+	letter-spacing:.5px;
+}
+.containerOne .mrg{
+	margin:0px !important;
+}
+/*containerOne end*/
+/*containertwo starts*/
+.containertwo{
+	padding-bottom:100px;
+}
+.containertwo .leftbox{
+	width:300px;	
+}
+.containertwo .rightbox{
+	margin-left:60px;
+	width:825px;
+}
+.containertwo .headtxt{
+	font-size: 60px;
+	color: #756c5a;
+	margin: 75px 0px 5px 0px;
+	letter-spacing: 15px;
+}
+.containertwo .subheadtxt{
+	font-size: 25px;
+	color: #82705c;	
+	margin-bottom: 8px;
+}
+.containertwo .subtxt{
+	font-size: 18px;
+	color: #39322c;	
+	margin-bottom: 18px;
+}
+.containertwo .rightbox p{
+	font-size: 17px;
+	color: #908a8a;
+	line-height:30px;
+	letter-spacing: 1px;
+}
+/*containertwo ends*/
+/*containertwoone starts*/
+.containertwoone .banner{
+	margin-bottom: 50px;
+}
+.containertwoone .centerblock{
+	margin-bottom: 55px;	
+}
+.containertwoone .centerblock .barcode{
+	width:99px;
+	margin:38px auto 0px auto;
+}
+.containertwoone .centerblock ul{
+	text-align:center;
+}
+.containertwoone .centerblock ul li, .containertwoone .centerblock .link{
+	font-size: 17px;
+    color: #fff;
+	line-height: 29px;
+}
+.containertwoone .bartxt{
+	text-align:center;
+	font-size: 12px;
+	display:block;
+	color: #fff;
+	margin-top: 7px;
+	opacity:.5;
+}
+/*containertwoone ends*/
+/*containerthree start*/
+.containerthree .sectone {
+	width: 205px;
+}
+.containerthree .secttwo {
+	width: 980px;
+	background: #a59073;
+	margin-left: 8px;
+}
+.containerthree .spone {
+	font-size: 12px;
+	color: #fffdfc;
+}
+.containerthree .sptwo {
+	font-size:12px;
+	display: block;
+	color: #fffdfc;
+}
+.containerthree .spthree {
+	display: block;
+	font-size: 12px;
+	color: #fffdfc;
+	padding-bottom: 2px;
+	letter-spacing: 1px;
+}
+.containerthree .spfour {
+	display: block;
+	font-size: 12px;
+	color: #fffdfc;
+}
+.containerthree .sectone li {
+	width: 100%;
+	background: #a59073;
+	margin-bottom: 10px;
+}
+.containerthree .sectone li a {
+	display: block;
+	padding: 12px 0 12px 27px;
+}
+.containerthree .active span, .containerthree .sectone li a:hover span {
+	color: #fff100;
+}
+.containerthree .imagesect {
+	width: 932px;
+	padding-top: 22px;
+}
+.containerthree .sectthree {
+	width: 932px;
+	padding-bottom: 35px;
+	margin: 0 auto;
+}
+.containerthree .secttext h2 {
+	font-size: 40px;
+	color: #0e070e;
+	text-align: center;
+	padding-top: 15px;
+	font-weight: bold;
+	letter-spacing: 5px;
+}
+.containerthree .secttext h3 {
+	font-size: 13px;
+	color: #0e070e;
+	text-align: center;
+	padding-top: 5px;
+	letter-spacing: 4px;
+}
+.containerthree .secttext h4 {
+	font-size: 14px;
+	color: #0e070e;
+	text-align: center;
+	padding-top: 5px;
+	letter-spacing: 6px;
+	font-weight: bold;
+}
+.containerthree .secttextextra h2,
+.containerthree .secttextextra h3,
+.containerthree .secttextextra h4,
+.containerthree .secttextextra p {
+	color: #57352c !important;
+}
+.containerthree .secttext p {
+	font-size: 14px;
+	color: #0e070e;
+	width: 689px;
+	text-align: center;
+	line-height: 17px;
+	padding-top: 7px;
+	margin: 0 auto;
+}
+.containerthree .imagesecttwo {
+	width: 932px;
+	padding-top: 18px;
+}
+.containerthree .imagesecttwo a {
+	display: block;
+}
+.containerthree .imagesecttwo {
+	width: 932px;
+	padding-top: 18px;
+}
+.containerthree .imagesectthree a {
+	display: block;
+}
+.containerthree .imagesectthree {
+	width: 932px;
+	padding-top: 32px;
+}
+.containerthree .imagesect a {
+	display: block;
+}
+.containerthree .sectlast a {
+	font-size: 12px;
+	color: #FFF;
+	
+}
+.containerthree .sectlast {
+	background: #3e2111;
+	text-align: right;
+	padding: 5px 6px;
+}
+.containerthree{
+	padding: 13px 0 80px 0;	
+}
+/*containerthree end*/
