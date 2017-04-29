@@ -107,8 +107,13 @@
 	font-size: 12px;
 	color: #fffdfc;
 }
-.containerthree .sptwo {
-	font-size:12px;
+.containerthree .sptwozhcn {
+	font-size:16px;
+	display: block;
+	color: #fffdfc;
+}
+.containerthree .sptwoenus {
+	font-size:14px;
 	display: block;
 	color: #fffdfc;
 }
@@ -131,10 +136,11 @@
 }
 .containerthree .sectone li a {
 	display: block;
-	padding: 12px 0 12px 27px;
+	padding: 12px 0 12px 18px;
 }
 .containerthree .active span, .containerthree .sectone li a:hover span {
-	color: #fff100;
+	color: #FCD475;
+	/*color:#fff100;*/
 }
 .containerthree .imagesect {
 	width: 932px;
@@ -207,7 +213,14 @@
 .containerthree .sectlast a {
 	font-size: 12px;
 	color: #FFF;
-	
+}
+.containerthree .sectlast a:hover {
+	color: #FFF100;
+}
+.containerthree .sectlast a.page-up{
+}
+.containerthree .sectlast a.page-down{
+	margin:0 26px 0 12px;
 }
 .containerthree .sectlast {
 	background: #3e2111;

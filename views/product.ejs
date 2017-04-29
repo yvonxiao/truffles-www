@@ -23,12 +23,12 @@
         <div  class=" clearfloat">
           <div class="sectone fl">
             <ul id="product-series">
-              <li class="active"><a href="javascript:;" class="clearfloat"><span class="spone fl">1.</span><span class="sptwo fl"><%= __('productBestSellerSeries') %></span></a></li>
-              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">2.</span><span class="sptwo fl"><%= __('productRowBlockSeries') %></span></a></li>
-              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">3.</span><span class="sptwo fl"><%= __('productShellSeries') %></span></a></li>
-              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">4.</span><span class="sptwo fl"><%= __('productLiqueurSeries') %></span></a></li>
-              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">5.</span><span class="sptwo fl"><%= __('productWeddingSeries') %></span></a></li>
-              <li ><a href="javascript:;" class="clearfloat"><span class="spone fl">6.</span><span class="sptwo fl"><%= __('productGiftBoxSeries') %></span></a></li>
+              <li class="active"><a href="javascript:;" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __('productBestSellerSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __('productRowBlockSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __('productShellSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __('productLiqueurSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __('productWeddingSeries') %></span></a></li>
+              <li ><a href="javascript:;" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __('productGiftBoxSeries') %></span></a></li>
             </ul>
           </div>
           <div class="secttwo fl">
@@ -56,7 +56,10 @@
                 <p>表面有一层香醇的可可粉，初入口呈现些许苦味，随后而来的香甜，更加让人在巧克力融在口中的一瞬间，体会到一种幸福的清甜。苦尽甘来的巧克力本色，在本系列中尤为显著，成就了其经典热卖的地位。</p>
               </div>
             </div>
-            <div class="sectlast"> <a href="#">产-品/PAGE DOWN</a> </div>
+            <div class="sectlast">
+              <a href="javascript:;" class="page-up"><%= __('pageUp') %></a>
+              <a href="javascript:;" class="page-down"><%= __('pageDown') %></a>
+            </div>
           </div>
         </div>
       </div>
