@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<%- include('common-head-content',{title:__('productTitle')}) %>
+</head>
+
+<body class="bgcolor">
+<!--header starts-->
+<%- include('common-header',{active:'productLink'}) %>
+<!--header ends-->
+<!-- nav starts -->
+<div class="nav">
+  <div class="nav-content">
+    <span><a class="nav-home" title="<%= __('indexLink') %>" href="/"><%= __('indexLink') %></a></span>&nbsp;&gt;&nbsp;<span><%= __('productLink') %></span>
+  </div>
+</div>
+<!-- nav ends -->
+<!--container starts-->
+<div class="container">
+  <div class="containerthree">
+    <div class="wrapper">
+      <div class="tabsect">
+        <div  class=" clearfloat">
+          <div class="sectone fl">
+            <ul id="product-series">
+              <% for(let seriesParamName of productPage.paramSeriesMap.entries()) {
+              %>
+              <li <%if(seriesParamName[1]===productPage.currentSeriesName){%>class="active"<%}%>><a href="/product/<%= seriesParamName[0] %>/1" class="clearfloat"><span class="<%if(isZhCn){%>sptwozhcn<%}else{%>sptwoenus<%}%> fl"><%= __(seriesParamName[1]) %></span></a></li>
+              <%
+              }%>
+            </ul>
+          </div>
+          <div class="secttwo fl">
+            <div id="product-list" class="sectthree">
+              <% if(productPage.descType) {
+                %>
+              <div class="secttext">
+                <h2 class="desc-type-1"><%= __(productPage.currentSeriesName) %></h2>
+                <!--<h3></h3>-->
+                <h4></h4>
+                <p><%= __(productPage.currentSeriesName+'Desc') %></p>
+              </div>
+                <%
+              }%>
+              <% for(let pageItem of productPage.pageItems) {
+              for(let i = 0;i<pageItem["images"].length;i++){
+                  if(i<pageItem["images"].length-1){
+              %>
+              <div class="imagesect"><a href="javascript:;"> <img src="<%= globalConfig.website_img %>images/<%= pageItem['images'][i] %>"></a> </div>
+              <%
+                  }else{
+              %>
+              <div class="imagesectthree"><a href="javascript:;"> <img src="<%= globalConfig.website_img %>images/<%= pageItem['images'][i] %>"></a> </div>
+              <%
+                  }
+              }
+              %>
+              <div class="secttext" style="color:<%= pageItem.color %>">
+                <h2><%= __(pageItem.id) %></h2>
+                <!--<h3></h3>-->
+                <h4><%= __(pageItem.id+'Slogan') %></h4>
+                <p><%= __(pageItem.id+'Desc') %></p>
+              </div>
+              <%
+              }%>
+            </div>
+            <div class="sectlast">
+              <% if(productPage.hasPageUp){
+              %>
+              <a href="/product/<%= productPage.currentSeriesParam %>/<%= productPage.pageNo-1 %>" class="page-up"><%= __('pageUp') %></a>
+              <%
+              } %>
+              <% if(productPage.hasPageDown){
+              %>
+              <a href="/product/<%= productPage.currentSeriesParam %>/<%= productPage.pageNo+1 %>" class="page-down"><%= __('pageDown') %></a>
+              <%
+              } %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--container ends-->
+<!--footer starts-->
+<%- include('common-footer') %>
+<!--footer ends-->
+<!--scripts starts-->
+<%- include('common-js') %>
+<!--scripts ends-->
+</body>
+</html>
