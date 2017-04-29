@@ -29,9 +29,9 @@ const contact = require('./routes/contact');
 // middlewares
 app.use(convert(bodyparser));
 // app.use(convert(json()));
-if(config.getconfig.isDev){
-// app.use(convert(logger()));
-}
+// if(config.getconfig.isDev){
+//     app.use(convert(logger()));
+// }
 app.use(convert(require('koa-static')(__dirname+'/public/dist',{
     maxAge:IS_ENV_PROD?365*24*60*60*1000:0
 })));

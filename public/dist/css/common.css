@@ -153,22 +153,25 @@
 }
 .containerthree .secttext h2 {
 	font-size: 40px;
-	color: #0e070e;
+	/*color: #0e070e;*/
 	text-align: center;
 	padding-top: 15px;
 	font-weight: bold;
 	letter-spacing: 5px;
 }
+.containerthree .secttext h2.desc-type-1 {
+	padding-top: 40px;
+}
 .containerthree .secttext h3 {
 	font-size: 13px;
-	color: #0e070e;
+	/*color: #0e070e;*/
 	text-align: center;
 	padding-top: 5px;
 	letter-spacing: 4px;
 }
 .containerthree .secttext h4 {
 	font-size: 14px;
-	color: #0e070e;
+	/*color: #0e070e;*/
 	text-align: center;
 	padding-top: 5px;
 	letter-spacing: 6px;
@@ -182,7 +185,7 @@
 }
 .containerthree .secttext p {
 	font-size: 14px;
-	color: #0e070e;
+	/*color: #0e070e;*/
 	width: 689px;
 	text-align: center;
 	line-height: 17px;
@@ -220,12 +223,12 @@
 .containerthree .sectlast a.page-up{
 }
 .containerthree .sectlast a.page-down{
-	margin:0 26px 0 12px;
+	margin:0 0 0 12px;
 }
 .containerthree .sectlast {
 	background: #3e2111;
 	text-align: right;
-	padding: 5px 6px;
+	padding: 5px 32px 5px 6px;
 }
 .containerthree{
 	padding: 13px 0 80px 0;	

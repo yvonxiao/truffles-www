@@ -9,6 +9,7 @@
   }],
   "globalConfig":{
     "website_www":"/",
-    "website_static":"/"
+    "website_static":"/",
+    "website_img":"/"
   }
 }

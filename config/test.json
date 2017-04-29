@@ -8,6 +8,8 @@
     }
   }],
   "globalConfig":{
-    "website-www":"//"
+    "website-www":"//",
+    "website_static":"/",
+    "website_img":"/"
   }
 }
