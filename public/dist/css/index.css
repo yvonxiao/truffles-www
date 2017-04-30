@@ -48,7 +48,9 @@
 
 .banner a.move-banner-left {
     left:0;
+    border-radius: 0 10px 10px 0;
 }
 .banner a.move-banner-right {
     right:0;
+    border-radius: 10px 0 0 10px;
 }
