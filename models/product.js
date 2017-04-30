@@ -1,8 +1,6 @@
 const products = require('../db/product.json');
 var defaultSeriesParam,paramSeriesMap;
 
-
-
 module.exports = {
 
     getDefaultSeriesParam: function getDefaultSeriesParam(){
