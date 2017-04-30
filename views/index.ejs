@@ -13,8 +13,18 @@
 <div class="container">
 	<div class="containerOne">
     	<div class="banner">
-        	<img src="images/ctnonebanner.jpg">
+            <ul>
+                <li>
+                    <img src="images/ctnonebanner.jpg" />
+                </li>
+                <li>
+                    <img src="images/banner2.jpg" />
+                </li>
+            </ul>
+            <a href="javascript:;" class="move-banner move-banner-left">&lt;</a>
+            <a href="javascript:;" class="move-banner move-banner-right">&gt;</a>
         </div>
+
 	<div id="products-wrapper" class="wrapper">
     	<div class="gal clearfloat">
 			<dl>
@@ -70,6 +80,7 @@
 <!--footer ends-->
 <!--scripts starts-->
 <%- include('common-js') %>
+<script type="text/javascript" src="<%= globalConfig.website_static %>js/index.js?v=<%= globalConfig.version %>"></script>
 <!--scripts ends-->
 </body>
 </html>

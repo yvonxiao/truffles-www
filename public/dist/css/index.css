@@ -1,6 +1,54 @@
-.banner{
-    text-align:center;
+.banner {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
 }
-.banner img{
-    margin:0 auto;
+
+.banner img {
+    margin: 0 auto;
+    min-width: 1200px;
+}
+
+.banner ul {
+    float: left;
+    position: relative;
+}
+
+.banner li {
+    float: left;
+    position: absolute;
+    top: 0px;
+}
+
+.banner a.move-banner {
+    position: absolute;
+    width: 50px;
+    height: 100px;
+    top: 50%;
+    margin-top:-50px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 28px;
+    text-decoration: none;
+    color: #fff;
+    display:none;
+    text-shadow: 0 0 5px #666;
+    font-family: '黑体';
+    z-index:9;
+}
+
+.banner:hover a.move-banner{
+    display:block;
+}
+
+.banner a:hover{
+    background: rgba(125,125,125,.3);
+}
+
+.banner a.move-banner-left {
+    left:0;
+}
+.banner a.move-banner-right {
+    right:0;
 }
