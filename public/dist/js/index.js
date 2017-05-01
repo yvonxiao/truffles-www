@@ -128,7 +128,7 @@
         // 定义定时器
         var timer = window.setInterval(function(){
             moveBannerLeft();
-        },3000);
+        },5000);
 
         $(window).unload(function(){
             window.clearInterval(timer);
