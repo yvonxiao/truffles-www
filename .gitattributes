@@ -1,0 +1,4 @@
+*.css linguist-language=javascript
+*.ejs linguist-language=javascript
+*.jpg linguist-language=javascript
+*.png linguist-language=javascript
