@@ -13,10 +13,10 @@ module.exports = function(env){
         fileParts = tmpEntryName.split('.');
 
         if(fileParts.length===1){
-            if(env==='dev1') entry[tmpEntryName] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
+            if(env==='dev') entry[tmpEntryName] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
             else entry[tmpEntryName] = path.resolve('public','src','js','entry',f);
         }else if(fileParts.length===2){
-            if(env==='dev1') entry[fileParts[1]+path.sep+fileParts[0]] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
+            if(env==='dev') entry[fileParts[1]+path.sep+fileParts[0]] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
             else entry[fileParts[1]+path.sep+fileParts[0]] = path.resolve('public','src','js','entry',f);
         }else{
         }
@@ -28,7 +28,9 @@ module.exports = function(env){
         output:{
             filename:'js/[name].js',
             path:path.resolve('public','dist'),
-           publicPath:"/"
+            publicPath:"/",
+            hotUpdateChunkFilename: 'hot/hot-update.js',
+            hotUpdateMainFilename: 'hot/hot-update.json'
         },
         externals:[{
             jQuery:'jQuery'

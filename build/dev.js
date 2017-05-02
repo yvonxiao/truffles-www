@@ -11,7 +11,7 @@ module.exports = function(env){
             //     debug:true
             // }),
             new webpack.HotModuleReplacementPlugin(),
-            new webpack.NoErrorsPlugin()
+            new webpack.NoEmitOnErrorsPlugin()
         ]
     });
 

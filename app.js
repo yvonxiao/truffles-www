@@ -24,13 +24,15 @@ const IS_ENV_PROD = config.getconfig.env==='prod';
 if(config.getconfig.env==='dev'){
     const webpack = require('webpack');
     const webpackDevMiddleware = require('koa-webpack-dev-middleware');
-    // const webpackHotMiddleware = require('koa-webpack-hot-middleware');
+    const webpackHotMiddleware = require('koa-webpack-hot-middleware');
     const compile = webpack(require('./webpack.config.js')('dev'));
 
+    console.log(compile);
+
     app.use(convert(webpackDevMiddleware(compile, {
-        noInfo: true,
-        quiet: true,
-        lazy: true,
+        noInfo: false,
+        quiet: false,
+        lazy: false,
 
         // watch options (only lazy: false)
         watchOptions: {
@@ -40,7 +42,7 @@ if(config.getconfig.env==='dev'){
 
         // public path to bind the middleware to
         // use the same as in webpack
-        // publicPath: '/',
+        publicPath: compile.options.output.publicPath,
 
         // options for formating the statistics
         stats: {
@@ -48,7 +50,9 @@ if(config.getconfig.env==='dev'){
         }
     })));
 
-    // app.use(convert(webpackHotMiddleware(compile)));
+    app.use(convert(webpackHotMiddleware(compile,{
+        path: '/__webpack_hmr'
+    })));
 
 }
 
