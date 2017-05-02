@@ -21,6 +21,37 @@ GLOBAL_CONFIG.version = new Date().getTime();
 const systemLogger = log4js.getLogger('system');
 const IS_ENV_PROD = config.getconfig.env==='prod';
 
+if(config.getconfig.env==='dev'){
+    const webpack = require('webpack');
+    const webpackDevMiddleware = require('koa-webpack-dev-middleware');
+    // const webpackHotMiddleware = require('koa-webpack-hot-middleware');
+    const compile = webpack(require('./webpack.config.js')('dev'));
+
+    app.use(convert(webpackDevMiddleware(compile, {
+        noInfo: true,
+        quiet: true,
+        lazy: true,
+
+        // watch options (only lazy: false)
+        watchOptions: {
+            aggregateTimeout: 300,
+            poll: true
+        },
+
+        // public path to bind the middleware to
+        // use the same as in webpack
+        // publicPath: '/',
+
+        // options for formating the statistics
+        stats: {
+            colors: true
+        }
+    })));
+
+    // app.use(convert(webpackHotMiddleware(compile)));
+
+}
+
 const index = require('./routes/index');
 const brand = require('./routes/brand');
 const product = require('./routes/product');
