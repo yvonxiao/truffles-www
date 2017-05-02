@@ -18,7 +18,7 @@ fs.readdirSync(path.resolve(process.cwd(),'public','src','js','entry')).forEach(
 
 });
 
-module.exports = function(){
+module.exports = function(env){
     return {
         entry:entry,
         output:{
@@ -92,11 +92,11 @@ module.exports = function(){
             //     inject: false
             // }),
             new CopyWebpackPlugin([{
-                from:path.resolve('public','src','js','vendors','ie.js'),
-                to:path.resolve('public','dist','js','vendors','ie.js')
+                from:path.resolve('public','src','js','vendors','ie.min.js'),
+                to:path.resolve('public','dist','js','vendors','ie.min.js')
             },{
-                from:path.resolve('public','src','js','vendors','jquery-v1.12.4.js'),
-                to:path.resolve('public','dist','js','vendors','jquery-v1.12.4.js')
+                from:path.resolve('public','src','js','vendors','jquery.min.js'),
+                to:path.resolve('public','dist','js','vendors','jquery.min.js')
             },{
                 from:path.resolve('public','src','images'),
                 to:path.resolve('public','dist','images')

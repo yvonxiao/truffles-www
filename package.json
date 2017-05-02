@@ -6,8 +6,8 @@
   "license": "LGPL-3.0",
   "private": true,
   "scripts": {
-    "build-dev": "NODE_ENV=dev ./node_modules/.bin/webpack --progress --colors",
-    "build-prod": "NODE_ENV=prod ./node_modules/.bin/webpack --progress --colors",
+    "build-dev": "./node_modules/.bin/webpack --env=dev --progress --colors",
+    "build-prod": "./node_modules/.bin/webpack --env=prod --progress --colors",
     "start": "NODE_ENV=dev ./node_modules/.bin/nodemon bin/run",
     "koa": "NODE_ENV=dev ./node_modules/.bin/runkoa bin/www",
     "pm2": "NODE_ENV=prod pm2 start bin/run --name truffles-www",
