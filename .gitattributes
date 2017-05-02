@@ -1,4 +1,4 @@
-*.css linguist-language=javascript
-*.ejs linguist-language=javascript
-*.jpg linguist-language=javascript
-*.png linguist-language=javascript
+*.css linguist-language=JavaScript
+*.ejs linguist-language=JavaScript
+*.jpg linguist-language=JavaScript
+*.png linguist-language=JavaScript
