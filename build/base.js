@@ -23,9 +23,9 @@ module.exports = function(env){
         entry:entry,
         output:{
             filename:'js/[name].js',
-            path:path.resolve('public','dist'),
+            path:path.resolve('public','dist')
            /* publicPath:"/",*/
-            sourceMapFilename:'[name].map'
+            // sourceMapFilename:'[name].map'
         },
         externals:[{
             jQuery:'jQuery'

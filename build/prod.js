@@ -4,6 +4,7 @@ const commonConfig = require('./base.js');
 
 module.exports = function(env){
     return webpackMerge(commonConfig(),{
+        // devtool: 'cheap-module-eval-source-map',
         plugins:[
             new webpack.LoaderOptionsPlugin({
                 minimize:true,
@@ -17,7 +18,8 @@ module.exports = function(env){
                 compress: {
                     screw_ie8: true
                 },
-                comments: false
+                comments: false,
+                sourceMap:false
             })
         ]
     });
