@@ -2,8 +2,11 @@
 
 > truffles website project
 
-### branch develop has already add webpack support
+the master branch uses koa2,ejs to build a simple website
 
+the develop branch adds webpack with HMR support
+
+### checkout the develop branch
 ``` bash
 git branch develop
 ```
