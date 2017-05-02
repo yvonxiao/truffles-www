@@ -97,11 +97,10 @@ module.exports = function(){
             },{
                 from:path.resolve('public','src','js','vendors','jquery-v1.12.4.js'),
                 to:path.resolve('public','dist','js','vendors','jquery-v1.12.4.js')
+            },{
+                from:path.resolve('public','src','images'),
+                to:path.resolve('public','dist','images')
             }
-            // ,{
-            //     from:path.resolve('public','src','images'),
-            //     to:path.resolve('public','dist','images')
-            // }
             ]),
             new webpack.ProvidePlugin({
                 $:'jQuery'
