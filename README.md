@@ -24,8 +24,3 @@ npm install
 npm run build-prod
 npm run pm2
 ```
-
-
-
-
-
