@@ -33,7 +33,6 @@
 	color:#f3d177;
 	font-size:18px;
 	letter-spacing:4px;
-	font-family: fzssjw;
 	transition:all 1s;
 	-webkit-transition:all 1s;
 	-moz-transition:all 1s;
@@ -124,7 +123,8 @@
 	margin:8px 0;
 }
 .footer .footForm img{
-	width: auto !important;	
+	width: auto !important;
+	cursor:pointer;
 }
 .footer .footForm  input {
 	width: 118px;

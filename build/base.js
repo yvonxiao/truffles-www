@@ -7,19 +7,12 @@ const fs = require('fs');
 
 module.exports = function(env){
 
-    let entry = {},tmpEntryName,fileParts;
+    let entry = {},tmpEntryName,appChunks = [];
     fs.readdirSync(path.resolve(process.cwd(),'public','src','js','entry')).forEach(function(f){
         tmpEntryName = path.basename(f,'.js');
-        fileParts = tmpEntryName.split('.');
 
-        if(fileParts.length===1){
-            if(env==='dev1') entry[tmpEntryName] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
-            else entry[tmpEntryName] = path.resolve('public','src','js','entry',f);
-        }else if(fileParts.length===2){
-            if(env==='dev1') entry[fileParts[1]+path.sep+fileParts[0]] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
-            else entry[fileParts[1]+path.sep+fileParts[0]] = path.resolve('public','src','js','entry',f);
-        }else{
-        }
+        if(env==='dev') entry[tmpEntryName] = ['webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',path.resolve('public','src','js','entry',f)];
+        else entry[tmpEntryName] = path.resolve('public','src','js','entry',f);
 
     });
 
@@ -87,7 +80,8 @@ module.exports = function(env){
             new ExtractTextPlugin('css/[name].css'),
             new webpack.optimize.CommonsChunkPlugin({
                 // name:['common','manifest']
-                name:'common-bundle'
+                name:'common',
+                chunks:appChunks
 
                 // minChunks:function(module){
                 //     return module.context && module.context.indexOf('node_modules')!==-1;

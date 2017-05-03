@@ -30,7 +30,7 @@ if(config.getconfig.env==='dev'){
     app.use(convert(webpackDevMiddleware(compile, {
         noInfo: false,
         quiet: false,
-        lazy: true,
+        lazy: false,
 
         // watch options (only lazy: false)
         watchOptions: {

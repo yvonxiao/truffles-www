@@ -5,6 +5,9 @@ const commonConfig = require('./base.js');
 module.exports = function(env){
     return webpackMerge(commonConfig(),{
         // devtool: 'cheap-module-eval-source-map',
+        output:{
+            publicPath:"http://static.uuso.com/truffles/"
+        },
         plugins:[
             new webpack.LoaderOptionsPlugin({
                 minimize:true,

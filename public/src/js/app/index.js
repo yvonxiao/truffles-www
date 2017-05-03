@@ -1,5 +1,3 @@
-import './common.js'
-
 var MIN_W = 1200;
 var $divBanner = $('div.banner');
 var currentIndex = 0;
