@@ -27,12 +27,10 @@ if(config.getconfig.env==='dev'){
     const webpackHotMiddleware = require('koa-webpack-hot-middleware');
     const compile = webpack(require('./webpack.config.js')('dev'));
 
-    console.log(compile);
-
     app.use(convert(webpackDevMiddleware(compile, {
         noInfo: false,
         quiet: false,
-        lazy: false,
+        lazy: true,
 
         // watch options (only lazy: false)
         watchOptions: {

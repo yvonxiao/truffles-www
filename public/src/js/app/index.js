@@ -121,6 +121,15 @@ function bindPageEvent(){
         return false;
     });
 
+    $divBanner.on('click',function(e){
+        var eTarget = e.target;
+        if(eTarget.nodeName==='IMG'){
+            var $eTarget = $(eTarget),pageUrl = $eTarget.data('url');
+            if(pageUrl) window.location.href = pageUrl;
+        }
+        return false;
+    });
+
     $(window).resize(function(){
         resetDivBanner();
     });

@@ -8,6 +8,7 @@
 .banner img {
     margin: 0 auto;
     min-width: 1200px;
+    cursor:pointer;
 }
 
 .banner ul {
