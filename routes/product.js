@@ -6,9 +6,6 @@ var router = require('koa-router')();
 var productModel = require('../models/product');
 
 router.get(['/','/:seriesParam','/:seriesParam/:pageNo'], async function (ctx, next) {
-    let locale = ctx.cookies.get('locale');
-    ctx.state.isZhCn = locale && locale==='zh-CN';
-
     let seriesParam = ctx.params.seriesParam || productModel.getDefaultSeriesParam(),pageNo = ctx.params.pageNo || 1;
 
     ctx.state.productPage = productModel.getProductPage(productModel.getSeriesName(seriesParam),pageNo);

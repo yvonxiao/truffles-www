@@ -70,7 +70,8 @@ app.use(convert(require('koa-static')(__dirname+'/public/dist',{
 })));
 
 app.use(async (ctx,next) => {
-    Object.assign(ctx.state,{"globalConfig":GLOBAL_CONFIG});
+    let locale = ctx.cookies.get('locale');
+    Object.assign(ctx.state,{"globalConfig":GLOBAL_CONFIG,"isZhCn":(locale && locale==='zh-CN')});
     await next();
 });
 

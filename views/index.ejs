@@ -3,15 +3,6 @@
 <head>
 <%- include('common-head-content',{title:__('indexTitle')}) %>
 <link href="<%= globalConfig.website_static %>css/index.css?v=<%= globalConfig.version %>" rel="stylesheet" type="text/css" media="all"/>
-    <% if(isZhCn){
-    %>
-<style type="text/css">
-    .header .headerText ul li a {
-        font-family: fzssjw;
-    }
-</style>
-    <%
-    }%>
 </head>
 
 <body class="bgcolor">
