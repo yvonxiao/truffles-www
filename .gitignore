@@ -1,5 +1,7 @@
 .DS_Store
 .idea/
 node_modules/
+public/dist/
 npm-debug.log
 yarn-error.log
+

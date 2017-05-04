@@ -1,5 +1,18 @@
 @charset "utf-8";
 /* CSS Document */
+/*font starts*/
+@font-face {
+	font-family: "fzssjw";
+	src: url("../font/fzssjw.eot");
+	src:
+		url("../font/fzssjw.eot?#iefix") format("embedded-opentype"),
+		url("../font/fzssjw.woff") format("woff"),
+		url("../font/fzssjw.ttf") format("truetype"),
+		url("../font/fzssjw.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+/*font ends*/
 /*header starts*/
 .header {
 	width:100%;
@@ -18,8 +31,9 @@
 }
 .header .headerText ul li a {
 	color:#f3d177;
-	font-size:22px;
+	font-size:18px;
 	letter-spacing:4px;
+	font-family: fzssjw;
 	transition:all 1s;
 	-webkit-transition:all 1s;
 	-moz-transition:all 1s;
@@ -28,7 +42,7 @@
 .header .headerText ul li .smalTxt {
 	font-size: 12px;
 }
-.header .headerText ul li:hover a {
+.header .headerText ul li a:hover {
 	color:#fff;
 }
 .header .headerText ul li .active {
@@ -39,6 +53,18 @@
 }
 .header .headerText {
 	padding-top: 80px;
+	position:relative;
+}
+.header .headerText .menu-bar{
+	position: absolute;
+	width:126px;
+	height:3px;
+	left:0px;
+	bottom:0px;
+	border-radius: 3px;
+	background: rgba(255,255,255,.9);
+	z-index:1;
+	display:none;
 }
 /*header ends*/
 /*subheader starts*/
@@ -110,7 +136,8 @@
 	margin:8px 0;
 }
 .footer .footForm img{
-	width: auto !important;	
+	width: auto !important;
+
 }
 .footer .footForm  input {
 	width: 118px;

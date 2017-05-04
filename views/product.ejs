@@ -46,11 +46,11 @@
               for(let i = 0;i<pageItem["images"].length;i++){
                   if(i<pageItem["images"].length-1){
               %>
-              <div class="imagesect"><a href="javascript:;"> <img src="<%= globalConfig.website_img %>images/<%= pageItem['images'][i] %>"></a> </div>
+              <div class="imagesect"><a href="javascript:;"> <img src="<%= globalConfig.website_static %><%= _gap('images/'+pageItem['images'][i]) %>"></a> </div>
               <%
                   }else{
               %>
-              <div class="imagesectthree"><a href="javascript:;"> <img src="<%= globalConfig.website_img %>images/<%= pageItem['images'][i] %>"></a> </div>
+              <div class="imagesectthree"><a href="javascript:;"> <img src="<%= globalConfig.website_static %><%= _gap('images/'+pageItem['images'][i]) %>"></a> </div>
               <%
                   }
               }
