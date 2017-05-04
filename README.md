@@ -2,14 +2,9 @@
 
 > truffles website project
 
-the master branch uses koa2,ejs to build a simple website
+the master branch adds webpack with HMR support and file hash cache.
 
-the develop branch adds webpack with HMR support
-
-### checkout the develop branch
-``` bash
-git branch develop
-```
+the release-tradition-1.0 is the initial form which is just using koa2,ejs to build a simple website.
 
 ### build develop environment with HMR support
 ``` bash
@@ -22,5 +17,8 @@ npm run start
 ``` bash
 npm install
 npm run build-prod
+```
+upload public/dist files to CDN
+``` bash
 npm run pm2
 ```

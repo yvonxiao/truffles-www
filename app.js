@@ -59,7 +59,7 @@ if(SYSTEM_ENV==='dev'){
 
 }else if(SYSTEM_ENV==='prod'){
     if(fs.existsSync('./public/dist/stats.json')){
-        // don't need all the stats.json,the "require" will cache the json
+        // don't need all the date of the stats.json,the "require" will cache the json
         let statsJson = JSON.parse(fs.readFileSync('./public/dist/stats.json'));
         assetMap = getAssetMap({assets:statsJson.assets});
         statsJson = null;
