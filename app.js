@@ -19,9 +19,14 @@ log4js.configure({
 const GLOBAL_CONFIG = config.globalConfig;
 GLOBAL_CONFIG.version = new Date().getTime();
 const systemLogger = log4js.getLogger('system');
-const IS_ENV_PROD = config.getconfig.env==='prod';
+const SYSTEM_ENV = config.getconfig.env;
+const IS_ENV_PROD = SYSTEM_ENV==='prod';
+const fs = require('fs');
+import {getAssetMap} from './utils/appUtils';
+var assetMap;
 
-if(config.getconfig.env==='dev'){
+// init config by envrionment
+if(SYSTEM_ENV==='dev'){
     const webpack = require('webpack');
     const webpackDevMiddleware = require('koa-webpack-dev-middleware');
     const webpackHotMiddleware = require('koa-webpack-hot-middleware');
@@ -52,6 +57,15 @@ if(config.getconfig.env==='dev'){
         path: '/__webpack_hmr'
     })));
 
+}else if(SYSTEM_ENV==='prod'){
+    if(fs.existsSync('./public/dist/stats.json')){
+        // don't need all the stats.json,the "require" will cache the json
+        let statsJson = JSON.parse(fs.readFileSync('./public/dist/stats.json'));
+        assetMap = getAssetMap({assets:statsJson.assets});
+        statsJson = null;
+    }
+
+}else{
 }
 
 const index = require('./routes/index');
@@ -69,10 +83,18 @@ app.use(convert(require('koa-static')(__dirname+'/public/dist',{
     maxAge:IS_ENV_PROD?365*24*60*60*1000:0
 })));
 
+var getAssetPath;
+
+if(assetMap && assetMap.size){
+    getAssetPath = (asset)=>assetMap.has(asset)?assetMap.get(asset):asset;
+}else{
+    getAssetPath = (asset)=>asset;
+}
+
 app.use(async (ctx,next) => {
     let locale = ctx.cookies.get('locale');
     if(!locale) locale='zh-CN';
-    Object.assign(ctx.state,{"globalConfig":GLOBAL_CONFIG,"isZhCn":locale==='zh-CN'});
+    Object.assign(ctx.state,{"globalConfig":GLOBAL_CONFIG,"isZhCn":locale==="zh-CN","_gap":getAssetPath});
     await next();
 });
 

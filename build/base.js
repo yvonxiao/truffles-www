@@ -18,13 +18,6 @@ module.exports = function(env){
 
     return {
         entry:entry,
-        output:{
-            filename:'js/[name].js',
-            path:path.resolve('public','dist'),
-            publicPath:"/",
-            hotUpdateChunkFilename: 'hot/hot-update.js',
-            hotUpdateMainFilename: 'hot/hot-update.json'
-        },
         externals:[{
             jQuery:'jQuery'
         }],
@@ -32,52 +25,49 @@ module.exports = function(env){
             extensions:['.js','.json'],
             modules:[path.join('public','src'),'views','node_modules']
         },
+        /*
         module:{
             rules:[
-            // {
-            //     test:/\.js$/,
-            //     loader:'babel-loader',
-            //     exclude: '/node_modules/',
-            //     query:{
-            //         presets:['es2015','react']
-            //     }
-            // },
-            {
-                test:/\.css$/,use:ExtractTextPlugin.extract({
-                use:env==='dev'?'css-loader?sourceMap=true&minimize=true':'css-loader'
-            })},{
-                test: /\.(jpg|png|gif)$/,
-                use: 'file-loader?name=images/[name].[ext]&emitFile=false'
-            },{
-                test: /\.(ttf|eot|woff|svg)$/,
-                use: 'file-loader?name=font/[name].[ext]'
-            }
-            // now ejs is used for backend server renderring,so webpack here is just to handle static resources
-            // ,{
-            //     test:/\.ejs/,
-            //     use:{
-            //         loader:'html-loader?-minimize',
-            //         options:{
-            //             minimize: false,
-            //             attrs:'img:src img:data-src',
-            //             removeAttributeQuotes:false
-            //         }
-            //     }
-            // }
-            // images has already been compressed before they were put in here,so just move them...
-            // ,{
-            //     test: /\.(woff|woff2|eot|ttf|svg)$/,
-            //     use: {
-            //         loader: 'url-loader',
-            //         options: {
-            //             limit: 100000
-            //         }
-            //     }
-            // }
+                {
+                    test:/\.js$/,
+                    loader:'babel-loader',
+                    exclude: '/node_modules/',
+                    query:{
+                        presets:['es2015','react']
+                    }
+                },
+                // now ejs is used for backend server renderring,so webpack here is just to handle static resources
+                {
+                    test:/\.ejs/,
+                    use:{
+                        loader:'html-loader?-minimize',
+                        options:{
+                            minimize: false,
+                            attrs:'img:src img:data-src',
+                            removeAttributeQuotes:false
+                        }
+                    }
+                },
+                // images has already been compressed before they were put in here,so just move them...
+                {
+                    test: /\.(woff|woff2|eot|ttf|svg)$/,
+                    use: {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 100000
+                        }
+                    }
+                }
             ]
         },
+        */
         plugins:[
-            new ExtractTextPlugin('css/[name].css'),
+            // new HtmlWebpackPlugin({
+            //     filename:'../../views/common-header.html',
+            //     template:'views/common-header.ejs',
+            //     chunkSortMode:'dependency',
+            //     inject: false
+            // }),
             new webpack.optimize.CommonsChunkPlugin({
                 // name:['common','manifest']
                 name:'common',
@@ -87,23 +77,6 @@ module.exports = function(env){
                 //     return module.context && module.context.indexOf('node_modules')!==-1;
                 // }
             }),
-            // new HtmlWebpackPlugin({
-            //     filename:'../../views/common-header.html',
-            //     template:'views/common-header.ejs',
-            //     chunkSortMode:'dependency',
-            //     inject: false
-            // }),
-            new CopyWebpackPlugin([{
-                from:path.resolve('public','src','js','vendors','ie.min.js'),
-                to:path.resolve('public','dist','js','vendors','ie.min.js')
-            },{
-                from:path.resolve('public','src','js','vendors','jquery.min.js'),
-                to:path.resolve('public','dist','js','vendors','jquery.min.js')
-            },{
-                from:path.resolve('public','src','images'),
-                to:path.resolve('public','dist','images')
-            }
-            ]),
             new webpack.ProvidePlugin({
                 $:'jQuery'
             })
