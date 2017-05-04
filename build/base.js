@@ -106,8 +106,7 @@ module.exports = function(env){
             ]),
             new webpack.ProvidePlugin({
                 $:'jQuery'
-            },
-            new webpack.HotModuleReplacementPlugin())
+            })
         ]
     }
 }

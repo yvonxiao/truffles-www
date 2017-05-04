@@ -1,4 +1,3 @@
-// import '../vendors/ie.js'
 import Cookies from '../vendors/js.cookie.js'
 
 $(function(){
