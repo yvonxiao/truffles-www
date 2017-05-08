@@ -13,7 +13,7 @@
     "pm2": "NODE_ENV=prod pm2 start bin/run --name truffles-www",
     "pm2-restart": "NODE_ENV=prod pm2 restart bin/run --name truffles-www",
     "pm2-stop": "NODE_ENV=prod pm2 stop bin/run --name truffles-www",
-    "test": "NODE_ENV=test ./node_modules/.bin/mocha -u bdd"
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha -u bdd -r should test/*/*.test.js"
   },
   "dependencies": {
     "co": "^4.6.0",
