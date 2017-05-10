@@ -16,5 +16,5 @@ describe('test/models/product.test.js',function(){
         productModel.getSeriesName('best-seller-series').should.equal('productBestSellerSeries');
     });
 
-    
+
 });
