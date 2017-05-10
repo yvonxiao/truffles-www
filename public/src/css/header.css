@@ -137,7 +137,7 @@
 }
 .footer .footForm img{
 	width: auto !important;
-
+	cursor:pointer;
 }
 .footer .footForm  input {
 	width: 118px;
