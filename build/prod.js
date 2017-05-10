@@ -19,7 +19,7 @@ module.exports = function(env){
             rules:[
                 {
                     test:/\.css$/,use:ExtractTextPlugin.extract({
-                    use:env==='dev'?'css-loader?sourceMap=true&minimize=true':'css-loader'
+                    use:'css-loader'
                 })}
                 ,{
                     test: /\.(jpg|png|gif)$/,
