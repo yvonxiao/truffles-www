@@ -32,7 +32,7 @@ module.exports = function(env){
         },
         plugins:[
             new WebpackMd5Hash(),
-            new ExtractTextPlugin('css/[name].[chunkhash].css'),
+            new ExtractTextPlugin('css/[name].[contenthash:20].css'),
             new CopyWebpackPlugin([{
                 from:path.resolve('public','src','js','vendors','ie.min.js'),
                 to:path.resolve('public','dist','js','vendors','ie.min.js')
