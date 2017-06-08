@@ -9,7 +9,7 @@
   }],
   "globalConfig":{
     "website-www":"//",
-    "website_static":"http://static.uuso.com/truffles/",
-    "website_img":"http://static.uuso.com/truffles/"
+    "website_static":"https://static.uuso.com/truffles/",
+    "website_img":"https://static.uuso.com/truffles/"
   }
 }

@@ -6,11 +6,9 @@ const co = require('co');
 const convert = require('koa-convert');
 const json = require('koa-json');
 const onerror = require('koa-onerror');
+const maxrequests = require('koa-maxrequests');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
-const locale = require('koa-locale');
-const i18n = require('koa-i18n');
-locale(app);
 const config = require('getconfig');
 const log4js = require('log4js');
 log4js.configure({
@@ -21,6 +19,17 @@ GLOBAL_CONFIG.version = new Date().getTime();
 const systemLogger = log4js.getLogger('system');
 const SYSTEM_ENV = config.getconfig.env;
 const IS_ENV_PROD = SYSTEM_ENV==='prod';
+if(IS_ENV_PROD){
+    app.use(convert(maxrequests({
+        // if keepalive socket hit max requests, response will set `Connection: close` header.
+        // it's the same as the keepalive in the /etc/nginx/nginx.conf
+        max: 100
+    })));
+}
+const locale = require('koa-locale');
+const i18n = require('koa-i18n');
+locale(app);
+
 const fs = require('fs');
 import {getAssetMap} from './utils/appUtils';
 var assetMap;

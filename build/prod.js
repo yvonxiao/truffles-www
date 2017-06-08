@@ -13,7 +13,7 @@ module.exports = function(env){
         output:{
             filename:'js/[name].[chunkhash].js',
             path:path.resolve('public','dist'),
-            publicPath:"http://static.uuso.com/truffles/"
+            publicPath:"https://static.uuso.com/truffles/"
         },
         module:{
             rules:[
