@@ -52,9 +52,9 @@
 }
 .header .headerText {
 	padding-top: 80px;
-	position:relative;
+	/*position:relative;*/
 }
-.header .headerText .menu-bar{
+/*.header .headerText .menu-bar{
 	position: absolute;
 	width:126px;
 	height:3px;
@@ -64,7 +64,7 @@
 	background: rgba(255,255,255,.9);
 	z-index:1;
 	display:none;
-}
+}*/
 /*header ends*/
 /*subheader starts*/
 .subHead {
