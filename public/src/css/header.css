@@ -17,43 +17,51 @@
 .header {
 	width:100%;
 	background:#0d0707;
-	padding:19px 0px 20px 0px;
 }
 .header .headerText ul li {
 	float:left;
-	padding-right:120px;
+	/*padding-right:120px;*/
 }
 .header .logo {
-	width: 218px;
+	width:auto;
+	line-height:81px;
+	height:81px;
+	margin-top:18px;
 }
 .header .logo img {
-	width:100%;
+	width:auto;
 }
 .header .headerText ul li a {
 	color:#f3d177;
 	font-size:18px;
 	letter-spacing:4px;
-	transition:all 1s;
-	-webkit-transition:all 1s;
-	-moz-transition:all 1s;
-	-ms-transition:all 1s;
+	height:81px;
+	line-height:81px;
+	width:190px;
+	text-align: center;
+	padding:18px 0 11px;
+	transition:all 0.1s;
+	-webkit-transition:all 0.1s;
+	-moz-transition:all 0.1s;
+	-ms-transition:all 0.1s;
 }
 .header .headerText ul li .smalTxt {
 	font-size: 12px;
 }
 .header .headerText ul li a:hover {
 	color:#fff;
+	background:#40210f;
 }
 .header .headerText ul li .active {
 	color:#fff;
+	font-weight:bold;
 }
 .header .headerText ul .lastLi {
 	padding-right:0;
 }
-.header .headerText {
-	padding-top: 80px;
-	/*position:relative;*/
-}
+/*.header .headerText {
+	position:relative;
+}*/
 /*.header .headerText .menu-bar{
 	position: absolute;
 	width:126px;
