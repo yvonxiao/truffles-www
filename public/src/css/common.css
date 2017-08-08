@@ -177,6 +177,10 @@
 	letter-spacing: 6px;
 	font-weight: bold;
 }
+.containerthree .secttext h4.en_us {
+	font-size:19px !important;
+	letter-spacing: 0px !important;
+}
 .containerthree .secttextextra h2,
 .containerthree .secttextextra h3,
 .containerthree .secttextextra h4,

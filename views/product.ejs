@@ -58,7 +58,7 @@
               <div class="secttext" style="color:<%= pageItem.color %>">
                 <h2><%= __(pageItem.id) %></h2>
                 <!--<h3></h3>-->
-                <h4><%= __(pageItem.id+'Slogan') %></h4>
+                <h4 <%if(!isZhCn){%>class="en_us"<%}%>><%= __(pageItem.id+'Slogan') %></h4>
                 <p><%= __(pageItem.id+'Desc') %></p>
               </div>
               <%
