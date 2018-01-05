@@ -110,12 +110,12 @@ function bindPageEvent(){
     }
 
     $divBanner.children('a.move-banner-left').click(function(){
-        moveBannerLeft();
+        moveBannerRight();
         return false;
     });
 
     $divBanner.children('a.move-banner-right').click(function(){
-        moveBannerRight();
+        moveBannerLeft();
         return false;
     });
 

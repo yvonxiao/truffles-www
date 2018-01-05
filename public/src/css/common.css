@@ -3,11 +3,11 @@
 
 /*containerOne start*/
 .containerOne .gal{
-	padding:60px 0px 69px 0px;
+	padding:60px 30px 69px 30px;
 }
 .containerOne .gal dl{
-	width:149px;
-	margin-right:61px;
+	/*width:149px;*/
+	margin-right:46px;
 	float:left;
 }
 .containerOne .gal dl a{
@@ -18,7 +18,8 @@
 	font-size:16px;
 	text-align:center;
 	display:block;
-	margin-top:-26px;
+	/*margin-top:-26px;*/
+	margin-top:-20px;
 	letter-spacing:1px;
 }
 .containerOne .gal dl h2{
@@ -27,6 +28,9 @@
 	text-align:center;
 	padding-top:8px;
 	letter-spacing:.5px;
+}
+.containerOne .gal dl img{
+	width:auto!important;
 }
 .containerOne .mrg{
 	margin:0px !important;

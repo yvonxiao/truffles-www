@@ -140,5 +140,16 @@
         "color":"#80532E"
       }
     ]]
+  },
+  "productWaferSeries": {
+  "descType":0,
+  "param":"wafer-series",
+  "items":[[
+    {
+      "id":"subWafer",
+      "images":["product-7-1.jpg"],
+      "color":"#2c1211"
+    }
+  ]]
   }
 }

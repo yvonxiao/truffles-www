@@ -13,6 +13,7 @@
 	"productSeaShells": "别致贝壳",
 	"productGiftBoxes": "精美礼盒",
 	"productForWedding": "婚庆喜糖",
+	"productForWafer": "赫娜滋榛果威化",
 	"contactUs": "联系我们",
 	"onlineMarket": "在线商场",
 	"address": "上海市普陀区中江路388弄2号楼1503室",
@@ -24,6 +25,7 @@
 	"productLiqueurSeries": "德菲丝酒心系列",
 	"productWeddingSeries": "德菲丝甜蜜爱情见证系列",
 	"productGiftBoxSeries": "德菲丝精致礼盒系列",
+	"productWaferSeries": "赫娜滋榛果威化饼干系列",
 	"subTpf": "德菲丝T型盒全家福",
 	"subTpfSlogan": " ",
 	"subTpfDesc": " ",
@@ -93,6 +95,9 @@
 	"subBearGiftBox": "小熊礼盒",
 	"subBearGiftBoxSlogan": "会心一笑，心意传递",
 	"subBearGiftBoxDesc": "软萌的小熊遇上香甜馥郁的松露形巧克力，无论哪一种都能立刻融化你的心。甜蜜时刻让小熊替你传递心意，丝丝甜蜜即刻融化于心。",
+	"subWafer": "赫娜滋榛果威化饼干",
+	"subWaferSlogan": "五层奶源，欧洲诱惑",
+	"subWaferDesc":"以制作手工甜品般的精致与细腻工艺打造的一款威化饼干，采用优质荷兰奶源与手工筛选的榛果粒，五层夹心让口感更有层次，不含反式脂肪酸，奶香浓郁，榛果醇香。",
 	"pageUp": "上一页",
 	"pageDown": "下一页"
 }
