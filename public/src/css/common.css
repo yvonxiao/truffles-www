@@ -3,16 +3,19 @@
 
 /*containerOne start*/
 .containerOne .gal{
-	padding:60px 30px 69px 30px;
+	display:table-row;
 }
 .containerOne .gal dl{
 	/*width:149px;*/
-	margin-right:46px;
-	float:left;
+	/*margin-right:46px;*/
+	display:table-cell;
+	height:128px;
+	padding:60px 0px 69px;
+	/*float:left;*/
 }
-.containerOne .gal dl a{
+/*.containerOne .gal dl a{
 	width:100%;
-}
+}*/
 .containerOne .gal dl .textStl{
 	color: #fce1b4;
 	font-size:16px;
@@ -31,6 +34,9 @@
 }
 .containerOne .gal dl img{
 	width:auto!important;
+}
+.containerOne .gal dl dt,.containerOne .gal dl dd{
+	text-align: center;
 }
 .containerOne .mrg{
 	margin:0px !important;

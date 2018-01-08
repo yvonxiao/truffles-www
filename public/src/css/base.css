@@ -140,4 +140,6 @@ input type:radiobox{
 	color:#ffffff;
 	line-height:22px;
 }
-
+.wrapper-table{
+	display:table;
+}
